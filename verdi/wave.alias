@@ -1,0 +1,21 @@
+# The alias file can be loaded from the Wave window in Verdi from the following menu after selecting a signal:
+#
+#   Waveform -> Set Radix -> Add Alias from File
+#
+# Verdi uses either # or " as a line comment character, let's use # since it makes sense.
+#
+# The format of the lines are pulled directly into the Verdi Waveform Alias Editor window. Each column has the following
+# meaning in order from left to right:
+#
+# "Alias to display"  "Hex Value"   "Background Color"
+#
+# The alias value can be parsed just like SystemVerilog, therefore z, x, and ? may be used.
+#
+alias "BusName"
+  READACCESS    16'h0001  NULL
+  WRITEACCESS   16'h0002  NULL
+  RESET         16'hC0DE  NULL
+  BEGIN         16'hAA55  NULL
+  NULL          16'h????  ID_GRAY4
+  ERROR         16'hE00E  ID_RED5
+endalias
